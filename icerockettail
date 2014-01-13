@@ -25,6 +25,9 @@ def main(query, number=None, interval=120):
         tweets = map(parse_tweet, reversed(soup.find("ul", id="twitter-results")('li', 'media')))
 
         if first and number is not None:
+            # mark as already seen old tweets
+            for _, _, url in tweets[int(number):]:
+                already_seen.insert(0, url)
             tweets = tweets[:int(number)]
             first = False
 
