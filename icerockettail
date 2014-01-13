@@ -33,7 +33,7 @@ def main(query, number=None, interval=120):
                 already_seen.insert(0, url)
                 already_seen = already_seen[:100]
                 message = message.replace("\r\n", " ").replace("\n", " ")
-                sys.stdout.write(("@%s: %s - %s\n" % (nick, message, url)).encode("Utf-8"))
+                sys.stdout.write(("%s: %s - %s\n" % (nick, message, url)).encode("Utf-8"))
                 sys.stdout.flush()
 
         time.sleep(interval)
