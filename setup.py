@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(name='icerockettail',
-      version='0.1',
+      version='0.1.1',
       description='equivalent of tail -f on icerocket twitter search results',
       author='Laurent Peuch',
       #long_description='',
